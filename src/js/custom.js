@@ -15,11 +15,10 @@ jQuery(document).ready(function () {
    
    $('.afisha-slider').slick({
  		infinite: false,
- 		// centerMode: true,
  		slidesToShow: 1
   	});
 
-	$('.scene').each(function(){
+	$('.scene').each( function(){
    		$(this).parallax(); 
 	});
 
@@ -32,7 +31,7 @@ jQuery(document).ready(function () {
 		$('.girls .scene').hide();
 		$('.girls .gallery-wrap').show();
 		$('#girls').addClass('active');
-		setTimeout(() => {
+		setTimeout( () => {
 			$('.gallery__item').addClass('active');
 		},200);
 	});
@@ -41,7 +40,7 @@ jQuery(document).ready(function () {
 		$('.pary .scene').hide();
 		$('.pary .gallery-wrap').show();
 		$('#pary').addClass('active');
-		setTimeout(() => {
+		setTimeout( () => {
 			$('.gallery__item').addClass('active');
 		},200);
 	});
@@ -81,10 +80,8 @@ jQuery(document).ready(function () {
 		e.preventDefault();
 
 		var msg = $('.form__msg'),
-            // message = $('.form-alert .msg'),
             form = $(this).closest('.form'),
             inputs =  form.find('.form__field'),
-            // errorMsg = form.find('.error'),
             valid = validate();
 
 
@@ -92,12 +89,10 @@ jQuery(document).ready(function () {
        
             var valid = true;
 
-            // console.log(inputs );
 
             inputs.each( function () {
 
                 if ( $(this).val() === '' ) {
-                     // console.log($(this).val());
                     valid = false;
                     return false;
                 } 
@@ -119,11 +114,17 @@ jQuery(document).ready(function () {
                 type: 'POST',
                 success: function(data){
                     showMessage(data);
-                    msg.css('background', 'rgba(39,179,101,1)');
+                    msg.css({
+                     background: "rgba(35,24,55,.95)",
+                      color : "rgba(39,179,101,1)"
+                    });
                 },
                 error: function(){
                     showMessage('Ошибка отправки. Пожалуйста, повторите попытку.');
-                    msg.css('background', 'rgba(158,26,47,1)');
+                    msg.css({
+                     background: "rgba(35,24,55,.95)",
+                       color : "rgba(158,26,47,1)" 
+                    });
                 },
                 complete: function(){
                     setTimeout(function () {
@@ -134,12 +135,16 @@ jQuery(document).ready(function () {
             });
          } else {
             showMessage('Пожалуйста, заполните все поля.')
-            msg.css('background', 'rgba(158,26,47,1)');
+            msg.css({
+                     background: "rgba(35,24,55,.95)",
+                       color : "rgba(158,26,47,1)" 
+                    });
             setTimeout( function () {
                 msg.removeClass('active');
             }, 2000);
          }
 	});
 });
+
 
 

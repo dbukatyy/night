@@ -40,6 +40,7 @@ jQuery(document).ready(function($){
 			}
 			prevArrow.on('click', prevSection);
     		nextArrow.on('click', nextSection);
+    		$('.menu__link').on('click', passSection);
     		
     		$(document).on('keydown', function(event){
 				if( event.which=='40' && !nextArrow.hasClass('inactive') ) {
@@ -60,6 +61,7 @@ jQuery(document).ready(function($){
 			prevArrow.off('click', prevSection);
     		nextArrow.off('click', nextSection);
     		$(document).off('keydown');
+    		$('.menu__link').off('click', passSection);
 		}
     }
 
@@ -176,6 +178,21 @@ jQuery(document).ready(function($){
             actual = actual +1;
         }
         resetScroll();
+    }
+
+    function passSection(e) {
+
+	    var idSection = $(e.target).data('id'), //Label for section selection
+	        section = $('.cd-section').filter("[id=" + idSection +"]"), //Section on which it is necessary to pass
+			visibleSection = sectionsAvailable.filter('.visible'),
+           	middleScroll = ( hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false,
+    		animationParams = selectAnimation(animationType, middleScroll, 'next');
+
+    		unbindScroll(visibleSection.next('.cd-section'), animationParams[3]);
+
+			visibleSection.removeClass('visible').children('div').velocity(animationParams[1], animationParams[3], animationParams[4] );
+
+ 			section.addClass('visible').children('div').velocity(animationParams[0], animationParams[3], animationParams[4], function(){});
     }
 
     function unbindScroll(section, time) {
