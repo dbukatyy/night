@@ -24,7 +24,7 @@ body::before {
   content: 'mobile';
   display: none;
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 992px) {
   body::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
@@ -41,7 +41,7 @@ a {
 Main Components 
 
 -------------------------------- */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 992px) {
   body[data-hijacking="on"] {
     overflow: hidden;
   }
@@ -87,12 +87,12 @@ Main Components
   background: -webkit-linear-gradient(175deg, rgb(21, 16, 26), rgb(39, 22, 62));
   background: linear-gradient(175deg, rgb(21, 16, 26), rgb(39, 22, 62));
 }
-[data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
+[data-animation="parallax"] .cd-section > div, .cd-section:first-of-type > div,[data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-[data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
+[data-animation="parallax"] .cd-section:first-of-type > div,.cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
   background-image: url("../img/img-1.jpg");
 }
 [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
@@ -107,7 +107,7 @@ Main Components
 [data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
   // background-image: url("../img/img-5.jpg");
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 992px) {
   
   [data-hijacking="on"] .cd-section {
     opacity: 0;
@@ -142,12 +142,12 @@ Main Components
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 992px) {
   .cd-section:first-of-type > div::before {
     display: none;
   }
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 992px) {
   .cd-section > div {
     position: fixed;
     top: 0;
@@ -213,7 +213,7 @@ Main Components
   -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
   transition: opacity 0.2s 0s, visibility 0s 0.2s;
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 992px) {
   .cd-vertical-nav {
     display: block;
   }

@@ -12,11 +12,12 @@
 </head>
 <body data-hijacking="off" data-animation="opacity">
 	//= template/header.html
+
 	<div class="over">
 		<div class="over__body">
 			<h5>Вам исполнился 21 год?</h1>
-			<a class="btn over__yes" href="#0">да</a>
-			<a class="btn over__no" href="#0">нет</a>
+			<a class="btn btn__inverce over__yes" href="#0">да</a>
+			<a class="btn btn__inverce over__no" href="#0">нет</a>
 		</div>
 	</div>
 
@@ -81,7 +82,7 @@
 							</ul>
 						</div><!-- afisha-slider__item -->
 					</div><!--afisha-slider -->
-					<div class="container">
+					<div class="container dates-wrap">
 						<ul class="dates">
 							<li class="dates__item">
 								<p class="dates__date">21.12.2017</p>
@@ -186,7 +187,7 @@
 				  	<img src="img/man.jpg" alt="girls">
 				  </li>
 				  <li class="layer pary__btn" data-depth="0.30">
-				  	<a href="#0" class="btn btn__inverce">обсудить детали</a>
+				  	<a href="#services" class="btn btn__inverce">обсудить детали</a>
 				  	<a href="#0" class="btn btn-gallery">посмотреть фото</a>
 				  </li>
 				  <li class="layer pary__title" data-depth="0.40">
@@ -267,6 +268,7 @@
 						<input type="email" class="form__field" placeholder="Email">
 						<input type="tel" class="form__field" placeholder="Тел.">
 						<input type="submit" class="btn" value="отправить">
+						<div class="form__msg"></div>
 					</form>
 				</div>
 			</div>

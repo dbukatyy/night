@@ -32,31 +32,32 @@
 	<nav class="menu">
 		<ul class="menu__list">
 			<li class="menu__item">
-				<a href="#index" class="menu__link">главная</a>
+				<a href="#index" data-id="index" class="menu__link">главная</a>
 			</li>
 			<li class="menu__item">
-				<a href="#afisha" class="menu__link">афиша</a>
+				<a href="#afisha" data-id="afisha" class="menu__link">афиша</a>
 			</li>
 			<li class="menu__item">
-				<a href="#girls" class="menu__link">наши девушки</a>
+				<a href="#girls" data-id="girls" class="menu__link">наши девушки</a>
 			</li>
 			<li class="menu__item">
-				<a href="#party" class="menu__link">мальчишник</a>
+				<a href="#party" data-id="party" class="menu__link">мальчишник</a>
 			</li>
 			<li class="menu__item">
-				<a href="#services" class="menu__link">услуги</a>
+				<a href="#services" data-id="services" class="menu__link">услуги</a>
 			</li>
 			<li class="menu__item">
-				<a href="#contacts" class="menu__link">контакты</a>
+				<a href="#contacts" data-id="contacts" class="menu__link">контакты</a>
 			</li>
 		</ul>
 		<div class="btn-close"></div>
 	</nav>
+
 	<div class="over">
 		<div class="over__body">
 			<h5>Вам исполнился 21 год?</h1>
-			<a class="btn over__yes" href="#0">да</a>
-			<a class="btn over__no" href="#0">нет</a>
+			<a class="btn btn__inverce over__yes" href="#0">да</a>
+			<a class="btn btn__inverce over__no" href="#0">нет</a>
 		</div>
 	</div>
 
@@ -121,7 +122,7 @@
 							</ul>
 						</div><!-- afisha-slider__item -->
 					</div><!--afisha-slider -->
-					<div class="container">
+					<div class="container dates-wrap">
 						<ul class="dates">
 							<li class="dates__item">
 								<p class="dates__date">21.12.2017</p>
@@ -226,7 +227,7 @@
 				  	<img src="img/man.jpg" alt="girls">
 				  </li>
 				  <li class="layer pary__btn" data-depth="0.30">
-				  	<a href="#0" class="btn btn__inverce">обсудить детали</a>
+				  	<a href="#services" class="btn btn__inverce">обсудить детали</a>
 				  	<a href="#0" class="btn btn-gallery">посмотреть фото</a>
 				  </li>
 				  <li class="layer pary__title" data-depth="0.40">
@@ -307,6 +308,7 @@
 						<input type="email" class="form__field" placeholder="Email">
 						<input type="tel" class="form__field" placeholder="Тел.">
 						<input type="submit" class="btn" value="отправить">
+						<div class="form__msg"></div>
 					</form>
 				</div>
 			</div>
@@ -337,9 +339,6 @@
 	</nav> <!-- .cd-vertical-nav -->
 	
 	<script src="js/vendor.js"></script>
-	<script src="js/velocity.min.js"></script>
-	<script src="js/velocity.ui.min.js"></script>
-	<script src="js/main.js"></script> <!-- Resource jQuery -->
 	<script src="js/custom.js"></script>
 </body>
 </html>
